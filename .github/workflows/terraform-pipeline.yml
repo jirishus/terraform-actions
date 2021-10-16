@@ -7,7 +7,9 @@ jobs:
      runs-on: ubuntu-latest
      steps:
       - uses: hashicorp/setup-terraform@v1
-
+        env:
+          TF_ACTION_WORKING_DIR: .
+          TERRAFORM_CLI_PATH: .
       - run: terraform init
 
       - id: plan
