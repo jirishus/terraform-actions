@@ -6,6 +6,8 @@ jobs:
   deploy:
      runs-on: ubuntu-latest
      steps:
+      - uses: actions/checkout@master
+     steps:
       - uses: hashicorp/setup-terraform@v1
         env:
           TF_ACTION_WORKING_DIR: .
